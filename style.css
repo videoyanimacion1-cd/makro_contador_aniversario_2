@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "MakroFont";
+    src: url("./fonts/HelveticaRoundedLTStd-BdCn.woff2") format("woff2");
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#ececec;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:100vh;
+    padding:20px;
+}
+
+#contador{
+    position:relative;
+    width:100%;
+    max-width:1152px;
+    margin:auto;
+}
+
+#fondo{
+    width:100%;
+    display:block;
+}
+
+/*=============================
+    BLOQUES
+==============================*/
+
+.grupo{
+    position:absolute;
+    width:16%;
+    text-align:center;
+}
+
+/* Posición de cada bloque */
+
+#dias{
+    left:7%;
+    top:68%;
+}
+
+#horas{
+    left:30.2%;
+    top:68%;
+}
+
+#minutos{
+    left:54%;
+    top:68%;
+}
+
+#segundos{
+    left:78%;
+    top:68%;
+}
+/*=============================
+    TÍTULOS
+==============================*/
+
+.titulo{
+    color:#ff2a2a;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+
+    font-size:clamp(14px,2.3vw,32px);
+
+    margin-bottom:8px;
+}
+
+/*=============================
+    DÍGITOS
+==============================*/
+
+.digitos{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:4%;
+
+}
+
+.caja{
+
+    width:35%;
+
+    aspect-ratio:0.72;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.caja span{
+    font-family:"MakroFont", sans-serif;
+    color:white;
+
+    font-size:clamp(45px,9vw,130px);
+
+    line-height:1;
+}
+
+/*=============================
+    MÓVIL
+==============================*/
+
+@media (max-width:768px){
+
+    .grupo{
+
+        width:14%;
+
+    }
+
+    .titulo{
+
+        font-size:9px;
+
+        margin-bottom:2px;
+
+    }
+
+    .caja span{
+
+        font-size:clamp(45px,12vw,90px);
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .grupo{
+
+        width:15%;
+
+    }
+
+    .titulo{
+
+        font-size:8px;
+
+    }
+
+    .caja span{
+
+        font-size:clamp(34px,9vw,68px);
+
+    }
+
+}
